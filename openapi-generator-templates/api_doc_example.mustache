@@ -1,0 +1,29 @@
+```python
+import asyncio
+import os
+
+import {{packageName}}
+from {{packageName}} import ApiClient, Configuration
+from {{packageName}}.api import {{classname}}
+
+
+async def main():
+    config = Configuration(host="https://localhost:50443")
+{{#hasAuthMethods}}
+    config.access_token = os.environ["CS_ACCESS_TOKEN"]
+{{/hasAuthMethods}}
+    async with ApiClient(config) as client:
+        api = {{classname}}(client)
+        {{#returnType}}response = {{/returnType}}await api.{{operationId}}({{#hasRequiredParams}}
+{{#allParams}}
+{{#required}}
+            {{paramName}}={{{example}}},
+{{/required}}
+{{/allParams}}
+        {{/hasRequiredParams}})
+
+
+asyncio.run(main())
+```
+
+Replace example values and populate the required model fields before running.

@@ -1,0 +1,34 @@
+[project]
+name = "cs-sdk-python"
+version = "0.1.0"
+description = "Async Python SDK for the Cobalt Strike REST API"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "aiohttp>=3.13.2",
+    "aiohttp-retry>=2.9.1",
+    "pydantic>=2.12.5",
+    "python-dateutil>=2.9.0.post0",
+    "typing-extensions>=4.7.1",
+    "urllib3>=2.6.2",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cs_sdk_python"]
+
+[dependency-groups]
+dev = [
+    "ruff==0.16.8",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+extend-exclude = ["src/cs_sdk_python/api_client", "docs/api_client"]
+
+[tool.ruff.lint]
+ignore = ["E501"]

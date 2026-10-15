@@ -1,0 +1,13 @@
+templateDir: openapi-generator-templates
+additionalProperties:
+  packageName: cs_sdk_python.api_client
+  packageVersion: 0.1.0
+  projectName: cs-sdk-python
+  library: asyncio
+  disallowAdditionalPropertiesIfNotPresent: false
+  hideGenerationTimestamp: true
+files:
+  docs_README.md:
+    folder: docs
+    destinationFilename: README.md
+    templateType: SupportingFiles

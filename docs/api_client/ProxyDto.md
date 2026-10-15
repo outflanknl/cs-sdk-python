@@ -1,0 +1,16 @@
+# ProxyDto
+
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**protocol** | **str** | Proxy Type (http | socks) | 
+**host** | **str** | Proxy Host | [optional] 
+**port** | **int** | Proxy Port | [optional] 
+**user_name** | **str** | Username | [optional] 
+**password** | **str** | Password | [optional] 
+
+[[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to API reference]](README.md)
+
+

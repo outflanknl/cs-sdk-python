@@ -1,0 +1,7 @@
+{
+  "name": "cs-sdk-python",
+  "private": true,
+  "dependencies": {
+    "@openapitools/openapi-generator-cli": "^2.41.0"
+  }
+}
